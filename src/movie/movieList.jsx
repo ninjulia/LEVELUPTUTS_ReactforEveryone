@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
-import { styled } from 'styled-components';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getMovies, resetMovie } from './actions';
 
 //import components
+import { MovieGrid } from './styles';
 import Movie from './movie';
+import { useParams } from 'react-router-dom';
 
 const MovieList = ({ getMovies, resetMovie, movies, moviesLoadedAt, isLoaded }) => {
 	//set movie data on page
@@ -47,11 +48,3 @@ const mapDispatchToProps = (dispatch) =>
 	);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieList);
-
-//styling should go in separate file
-const MovieGrid = styled.div`
-	display: grid;
-	padding: 1rem;
-	grid-template-columns: repeat(6, 1fr);
-	grid-row-gap: 1rem;
-`;

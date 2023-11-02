@@ -1,15 +1,8 @@
+import { options } from '../../netlify/functions/access';
+
 export const GET_MOVIES = 'GET_MOVIES';
 export const GET_MOVIE = 'GET_MOVIE';
 export const RESET_MOVIE = 'RESET_MOVIE';
-
-// import updated movies list
-const options = {
-	method: 'GET',
-	headers: {
-		accept: 'application/json',
-		Authorization: `Bearer ${import.meta.env.VITE_APP_API_READ_ACCESS_TOKEN}`,
-	},
-};
 
 export function getMovies() {
 	return async function (dispatch) {

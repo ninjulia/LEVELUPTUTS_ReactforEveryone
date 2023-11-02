@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { styled } from 'styled-components';
+import { Poster } from './styles';
+
 const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 
 function Movie({ movieData }) {
@@ -23,8 +24,3 @@ Movie.propTypes = {
 };
 
 export default Movie;
-
-//styling should go in separate file
-export const Poster = styled.img`
-	box-shadow: 0 0 35px #000;
-`;

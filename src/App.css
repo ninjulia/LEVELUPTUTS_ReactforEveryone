@@ -1,14 +1,13 @@
-html,
-body {
-	min-height: 100svh;
+body,
+#root {
+	height: 100vh;
 }
 
 #root {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: 2fr 1fr;
 	grid-template-areas: 'main' 'footer';
-	gap: 0;
 }
 
 .App {
@@ -46,11 +45,16 @@ footer {
 	grid-area: footer;
 
 	padding: 3rem;
+	font-size: 0.8rem;
+}
+
+footer .wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 footer img {
-	max-width: 6.25rem;
+	max-width: 6.25em;
 	height: auto;
 	display: inline-block;
-	margin-inline: 1rem;
 }

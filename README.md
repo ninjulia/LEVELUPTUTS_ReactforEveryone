@@ -28,7 +28,7 @@ This is set using the NODE_ENV variable in `src\util\Spotify.js`.
   - [Project](#project)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Running Notes](#running-notes)
+- [API Attribution](#api-attribution)
 
 ## Overview
 
@@ -54,7 +54,7 @@ TODO:
 ### Links
 
 - Solution URL: [https://github.com/ninjulia/LEVELUPTUTS_ReactforEveryone/](https://github.com/ninjulia/LEVELUPTUTS_ReactforEveryone/)
-- Live Site URL: [https://candid-wisp-e78ad8.netlify.app/](https://candid-wisp-e78ad8.netlify.app/)
+- Live Site URL: [https://superb-chimera-8a0809.netlify.app](https://superb-chimera-8a0809.netlify.app/)
 - Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/46d8e6e3-9422-49f3-99de-1594f29bfce7/deploy-status)](https://app.netlify.com/sites/candid-wisp-e78ad8/deploys)
 
 ## My process
@@ -81,13 +81,11 @@ TODO: Note changes for react-router-dom, useEffect, etc.
 
 - Website - [Julia](https://www.becausejulia.com)
 
-#### API Attribution
+## API Attribution
 
-Movie images and data provided by [TMDB logo](https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg). This product uses the [TMDB API](https://www.themoviedb.org/) but is not endorsed or certified by TMDB.
+- Movie images and data provided by [TMDB logo](https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg). This product uses the [TMDB API](https://www.themoviedb.org/) but is not endorsed or certified by TMDB.
 
-[docs](https://developer.themoviedb.org/docs)
-
----
+- [docs](https://developer.themoviedb.org/docs)
 
 ### NOTE
 

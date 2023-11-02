@@ -1,19 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { styled } from 'styled-components';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getMovie } from './actions';
 //import components
-import { Poster } from './movie';
+import { Poster, MovieWrapper, MovieInfo } from './styles';
 
 function MovieDetail({ getMovie, movie, movieLoadedAt, isLoaded }) {
+	//set movie info
 	const movieID = useParams().id;
+
+	const [title, setTitle] = useState('');
+	document.title = title;
 
 	useEffect(() => {
 		const hour = 60 * 60 * 1000;
 		if (!isLoaded || new Date() - new Date(movieLoadedAt) > hour) getMovie(movieID);
 	}, [movieID]);
+
+	useEffect(() => {
+		setTitle(movie.title);
+	});
 
 	const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 	const BACKDROP_PATH = 'http://image.tmdb.org/t/p/w1280';
@@ -49,33 +56,3 @@ const mapDispatchToProps = (dispatch) =>
 	);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieDetail);
-
-//styling should go in separate file, can use shorthand for CSS, but more verbose = more better, right?
-const MovieWrapper = styled.div`
-	position: relative;
-	padding-block-start: 50vh;
-	background-image: url(${(props) => props.$backdrop});
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-`;
-
-const MovieInfo = styled.div`
-	background-color: #fff;
-	text-align: left;
-	padding: 2rem 10%;
-	display: flex;
-
-	> div {
-		margin-inline-start: 1.75rem;
-	}
-
-	img {
-		position: relative;
-		top: -5rem;
-	}
-
-	p {
-		max-width: 90ch;
-	}
-`;
