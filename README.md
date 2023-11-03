@@ -48,7 +48,7 @@ TODO:
 
 - Solution URL: [https://github.com/ninjulia/LEVELUPTUTS_ReactforEveryone/](https://github.com/ninjulia/LEVELUPTUTS_ReactforEveryone/)
 - Live Site URL: [https://superb-chimera-8a0809.netlify.app](https://superb-chimera-8a0809.netlify.app/)
-- Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/46d8e6e3-9422-49f3-99de-1594f29bfce7/deploy-status)](https://app.netlify.com/sites/candid-wisp-e78ad8/deploys)
+- Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/4429c8ed-bfa4-48b6-9504-5198908d0d04/deploy-status)](https://app.netlify.com/sites/superb-chimera-8a0809/deploys)
 
 ## My process
 
