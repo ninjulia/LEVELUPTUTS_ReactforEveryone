@@ -10,13 +10,6 @@ The Movie Database (TMBD) API Key is defined in Netlify Environmental Variable. 
 npx netlify dev # spins up Server on http://localhost:8888
 ```
 
-The Spotify [learnReact-jammming](https://developer.spotify.com/dashboard/f8e592bcf7574f50979cfcde18fa1d9d) app only accepts traffic from two domains:
-
-- http://localhost:8888/
-- https://candid-wisp-e78ad8.netlify.app/
-
-This is set using the NODE_ENV variable in `src\util\Spotify.js`.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -76,6 +69,7 @@ TODO: Note changes for react-router-dom, useEffect, etc.
 - Project Walk-through [https://www.youtube.com/watch?v=DH991Dzb9iE](https://www.youtube.com/watch?v=DH991Dzb9iE)
 - Fetch API help [JavaScript Fetch API](https://www.youtube.com/watch?v=AGWwa25ZlRY) by [James Q Quick](https://www.youtube.com/@JamesQQuick)
 - Help transitioning react-router-dom to React18 [React Routing to New Page with React 18](https://medium.com/@lalafang33/react-routing-to-new-page-v18-aa293ccb716f) by [Lalafang](https://medium.com/@lalafang33).
+- Help hiding API key [FreeCodeCamp's How to Hide API Keys in Frontend Apps using Netlify Functions](https://www.freecodecamp.org/news/hide-api-keys-in-frontend-apps-using-netlify-functions/)
 
 ## Author
 

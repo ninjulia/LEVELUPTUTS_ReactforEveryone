@@ -6,7 +6,6 @@ import { getMovies, resetMovie } from './actions';
 //import components
 import { MovieGrid } from './styles';
 import Movie from './movie';
-import { useParams } from 'react-router-dom';
 
 const MovieList = ({ getMovies, resetMovie, movies, moviesLoadedAt, isLoaded }) => {
 	//set movie data on page
