@@ -61,7 +61,12 @@ TODO:
 
 As of late 2023, React is on vs 18. The tutorial was recorded on React 16, using create-react-app. A look at FreeCodeCamp's [How to Build a React App – A Walkthrough of the Many Different Ways](https://www.freecodecamp.org/news/how-to-build-a-react-app-different-ways) directed me to use [Vite.js](https://vitejs.dev/).
 
-TODO: Note changes for react-router-dom, useEffect, etc.
+Notable deviations from the Tutorial include:
+
+- leveraging recommended react hooks such as `useEffect()`
+- passing MovieDetails as props to avoid another API call
+- set page title dynamically **TODO: set in state**
+- **TODO: replaced outdated react-overdrive with another route-based animation toolset**
 
 ### Useful resources
 
@@ -69,6 +74,7 @@ TODO: Note changes for react-router-dom, useEffect, etc.
 - Project Walk-through [https://www.youtube.com/watch?v=DH991Dzb9iE](https://www.youtube.com/watch?v=DH991Dzb9iE)
 - Fetch API help [JavaScript Fetch API](https://www.youtube.com/watch?v=AGWwa25ZlRY) by [James Q Quick](https://www.youtube.com/@JamesQQuick)
 - Help transitioning react-router-dom to React18 [React Routing to New Page with React 18](https://medium.com/@lalafang33/react-routing-to-new-page-v18-aa293ccb716f) by [Lalafang](https://medium.com/@lalafang33).
+- Passing props from React Router Link components [How to Pass Props Through React Router's Link Component](https://ui.dev/react-router-pass-props-to-link)
 - Help hiding API key [FreeCodeCamp's How to Hide API Keys in Frontend Apps using Netlify Functions](https://www.freecodecamp.org/news/hide-api-keys-in-frontend-apps-using-netlify-functions/)
 
 ## Author
@@ -83,7 +89,11 @@ TODO: Note changes for react-router-dom, useEffect, etc.
 
 ### NOTE
 
-STILL EVALUATING react-overdrive not compatible with React18, used AutoAnimate instead https://www.freecodecamp.org/news/animate-react-apps/ https://auto-animate.formkit.com/
+STILL EVALUATING react-overdrive not compatible with React18, used AutoAnimate instead
+
+https://www.freecodecamp.org/news/animate-react-apps/
+
+https://auto-animate.formkit.com/
 
 maybe this? https://css-tricks.com/animating-between-views-in-react/
 

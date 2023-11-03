@@ -1,6 +1,5 @@
 //hide api access token
-// const token = import.meta.env.VITE_APP_API_READ_ACCESS_TOKEN
-const token = 'foobar';
+const token = import.meta.env.VITE_APP_API_READ_ACCESS_TOKEN;
 
 const options = {
 	method: 'GET',
@@ -17,10 +16,4 @@ export async function fetchMovies() {
 	);
 	const movies = await res.json();
 	return movies;
-}
-
-export async function fetchMovie(id) {
-	const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options);
-	const movieDetails = await res.json();
-	return movieDetails;
 }

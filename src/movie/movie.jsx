@@ -6,7 +6,10 @@ const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 
 function Movie({ movieData }) {
 	return (
-		<Link to={`/${movieData.id}`}>
+		<Link
+			to={`/${movieData.id}`}
+			//state={movieData}
+			state={{ movieData: movieData, posterURL: POSTER_PATH }}>
 			<Poster
 				src={movieData.poster_path ? `${POSTER_PATH}${movieData.poster_path}` : ''}
 				alt={movieData.title}

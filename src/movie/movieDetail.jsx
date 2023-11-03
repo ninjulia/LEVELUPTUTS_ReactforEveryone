@@ -1,28 +1,23 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getMovie } from './actions';
+import { useLocation } from 'react-router-dom';
+
 //import components
 import { Poster, MovieWrapper, MovieInfo } from './styles';
 
-function MovieDetail({ getMovie, movie, movieLoadedAt, isLoaded }) {
-	//set movie info
-	const movieID = useParams().id;
+export default function MovieDetail({ pageTitle }) {
+	//get movie data from MovieList item
+	const location = useLocation();
+	const movie = location.state.movieData;
+	const POSTER_PATH = location.state.posterURL;
 
-	const [title, setTitle] = useState('');
-	document.title = title;
-
-	useEffect(() => {
-		const hour = 60 * 60 * 1000;
-		if (!isLoaded || new Date() - new Date(movieLoadedAt) > hour) getMovie(movieID);
-	}, [movieID]);
+	//update page title tag
+	const [newPageTitle, setNewPageTitle] = useState(`${pageTitle}`);
 
 	useEffect(() => {
-		setTitle(movie.title);
-	});
+		setNewPageTitle(`${movie.title} | ${pageTitle}`);
+		document.title = newPageTitle;
+	}, [movie.title, newPageTitle]);
 
-	const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
 	const BACKDROP_PATH = 'http://image.tmdb.org/t/p/w1280';
 
 	return (
@@ -41,18 +36,3 @@ function MovieDetail({ getMovie, movie, movieLoadedAt, isLoaded }) {
 		</MovieWrapper>
 	);
 }
-
-const mapStateToProps = (state) => ({
-	movie: state.movies.movie,
-	isLoaded: state.movies.movieLoaded,
-});
-
-const mapDispatchToProps = (dispatch) =>
-	bindActionCreators(
-		{
-			getMovie,
-		},
-		dispatch
-	);
-
-export default connect(mapStateToProps, mapDispatchToProps)(MovieDetail);

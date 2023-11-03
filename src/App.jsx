@@ -14,16 +14,18 @@ import MovieList from './movie/movieList';
 import MovieDetail from './movie/movieDetail';
 import Toggle from './toggle/Toggle';
 
-const middleware = [logger, thunkMiddleware];
+//verbose logging on dev
+let middleware;
+process.env.NODE_ENV === 'development' ? (middleware = [logger, thunkMiddleware]) : (middleware = [thunkMiddleware]);
 
 //set up store
 const store = createStore(rootReducer, load(), composeWithDevTools(applyMiddleware(...middleware, save())));
 
 function App() {
-	const [title, setTitle] = useState('Level Up Movie Database | A way to learn REACT');
+	const [pageTitle, setPageTitle] = useState('Level Up Movie Database | A way to learn REACT');
 
 	useEffect(() => {
-		document.title = title;
+		document.title = pageTitle;
 	}, []);
 
 	return (
@@ -48,7 +50,7 @@ function App() {
 						/>
 						<Route
 							path="/:id"
-							element={<MovieDetail />}
+							element={<MovieDetail pageTitle={pageTitle} />}
 						/>
 					</Routes>
 				</div>
