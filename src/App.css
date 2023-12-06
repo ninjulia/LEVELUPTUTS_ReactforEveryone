@@ -58,3 +58,21 @@ footer img {
 	height: auto;
 	display: inline-block;
 }
+
+footer a:link {
+	color: rgb(30, 213, 169);
+}
+
+footer a:visited {
+	color: white;
+}
+
+footer a:is(:hover, :focus) {
+	color: rgb(1, 180, 228);
+}
+
+footer a:active {
+	color: black;
+	background: rgb(1, 180, 228);
+	background-image: linear-gradient(to right, rgb(30, 213, 169) 0%, rgb(1, 180, 228) 100%);
+}

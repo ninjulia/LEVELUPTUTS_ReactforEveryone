@@ -1,11 +1,12 @@
 import { styled } from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Poster = styled.img`
+export const Poster = styled(motion.img)`
 	box-shadow: 0 0 35px #000;
 `;
 
 //can use shorthand for CSS, but more verbose = more better, right?
-export const MovieWrapper = styled.div`
+export const MovieWrapper = styled(motion.div)`
 	position: relative;
 	padding-block-start: 50vh;
 	background-image: url(${(props) => props.$backdrop});
@@ -48,7 +49,7 @@ export const MovieInfo = styled.div`
 `;
 
 //movie thumbs are 154px / 231px
-export const MovieGrid = styled.div`
+export const MovieGrid = styled(motion.div)`
 	margin: 0 auto;
 	max-width: 1200px;
 
