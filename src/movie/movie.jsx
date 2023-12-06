@@ -8,7 +8,6 @@ function Movie({ movieData }) {
 	return (
 		<Link
 			to={`/${movieData.id}`}
-			//state={movieData}
 			state={{ movieData: movieData, posterURL: POSTER_PATH }}>
 			<Poster
 				src={movieData.poster_path ? `${POSTER_PATH}${movieData.poster_path}` : ''}

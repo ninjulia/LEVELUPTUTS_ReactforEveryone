@@ -1,6 +1,6 @@
 # Work for Level Up Tutorials' Mastering React Course
 
-This project was built as a solution to [Part 1: React 16 For Everyone](https://levelup.video/tutorials/react-16-for-everyone/) and [Part 2: Redux and React](https://levelup.video/tutorials/redux-and-react-for-everyone/). This project is part of their [Mastering React Training Course](https://levelup.video/paths/mastering-react). The tutorial was recorded several years ago using Reactv16, currently, React is on v18. I have researched modern methods and deviated from the tutorial where appropriate. See the Project section for more details.
+This project was built as a solution to [Part 1: React 16 For Everyone](https://levelup.video/tutorials/react-16-for-everyone/), and [Part 2: Redux and React](https://levelup.video/tutorials/redux-and-react-for-everyone/). This project is part of their [Mastering React Training Course](https://levelup.video/paths/mastering-react). The tutorial was recorded several years ago using Reactv16, currently, React is on v18. I have researched modern methods and deviated from the tutorial where appropriate. See the Project section for more details.
 
 ## Installing / Getting started
 
@@ -54,19 +54,23 @@ TODO:
 
 ### Built with
 
-- vite
-- netlify
+- Vite
+- Netlify
+- React
+- React Router
+- Redux
+- Framer Motion
 
 ### Project
 
-As of late 2023, React is on vs 18. The tutorial was recorded on React 16, using create-react-app. A look at FreeCodeCamp's [How to Build a React App – A Walkthrough of the Many Different Ways](https://www.freecodecamp.org/news/how-to-build-a-react-app-different-ways) directed me to use [Vite.js](https://vitejs.dev/).
+As of late 2023, React is on vs 18. The tutorial was recorded on React 16, using create-react-app. A look at FreeCodeCamp's [How to Build a React App – A Walkthrough of the Many Different Ways](https://www.freecodecamp.org/news/how-to-build-a-react-app-different-ways) directed me to use [Vite.js](https://vitejs.dev/). Set up Framer Motion for transitions after following the [Level Up Tutorial's Animating React with Framer Motion](https://levelup.video/tutorials/animating-react-with-framer-motion/getting-started).
 
 Notable deviations from the Tutorial include:
 
 - leveraging recommended react hooks such as `useEffect()`
 - passing MovieDetails as props to avoid another API call
-- set page title dynamically **TODO: set in state**
-- **TODO: replaced outdated react-overdrive with another route-based animation toolset**
+- leveraging Framer Motion for animations
+- set page title dynamically
 
 ### Useful resources
 
@@ -85,19 +89,3 @@ Notable deviations from the Tutorial include:
 
 - Movie images and data provided by [TMDB API](https://www.themoviedb.org/). This product uses the but is not endorsed or certified by TMDB.
 - [docs](https://developer.themoviedb.org/docs)
-
-### NOTE
-
-STILL EVALUATING react-overdrive not compatible with React18, used AutoAnimate instead
-
-https://www.freecodecamp.org/news/animate-react-apps/
-
-https://auto-animate.formkit.com/
-
-maybe this? https://css-tricks.com/animating-between-views-in-react/
-
-https://reactnative.dev/docs/animations?language=javascript
-
-or this https://github.com/aholachek/react-flip-toolkit#route-based-animations-with-react-router
-
-https://github.com/aholachek/react-flip-toolkit-router-example
